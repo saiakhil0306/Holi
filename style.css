@@ -1,28 +1,31 @@
+/* Make the background colorful */
 body {
     margin: 0;
     overflow: hidden;
-    background: linear-gradient(to right, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1, #fbc2eb);
     text-align: center;
     font-family: 'Arial', sans-serif;
-    color: white;
     position: relative;
 }
 
+/* Multi-colored Holi Text */
 h1 {
     font-size: 50px;
     font-weight: bold;
     text-transform: uppercase;
-    background: linear-gradient(45deg, red, blue, green, yellow, orange, purple);
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
     -webkit-background-clip: text;
     color: transparent;
-    animation: colorChange 3s infinite alternate;
+    display: inline-block;
+    animation: holiColors 3s infinite alternate;
 }
 
-@keyframes colorChange {
+@keyframes holiColors {
     0% { filter: hue-rotate(0deg); }
     100% { filter: hue-rotate(360deg); }
 }
 
+/* Canvas remains for color splash */
 canvas {
     position: absolute;
     top: 0;
